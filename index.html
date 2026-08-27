@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    .icon-link {
+      display: inline-block;
+      text-decoration: none;
+      color: white; 
+      opacity: 0.8;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .icon-link:hover {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body style="
+  background-image: url('./background.jpeg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  margin: 0; 
+  height: 100vh; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* FIX 3: This makes the boxes stack up and down! */
+  align-items: center;    /* Centers everything horizontally */
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;">
+
+  <div style="
+    margin-top: 5rem;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 60%;
+  ">
+    <h1 style="
+      margin: 0 0 0.75rem 0; 
+      color: hsl(0, 0%, 98%); 
+      font-size: 2rem;
+      letter-spacing: -0.75px;
+    ">Kai's website!</h1>
+
+    <p style="
+      margin: 0; 
+      color: rgba(255, 255, 255, 0.75); 
+      font-size: 1rem;
+      line-height: 1.5;
+    ">Hey there, this is my very own website! I am a 17 year old with an interest in coding, anything mechanical (like cars and heavy machinery) and space! Feel free to check out my profiles and other projects using the links below. Also click the button on the bottom left for a little surprise :P</p>
+  </div>
+
+  <div style="
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  ">
+    <h2 style="margin: 0 0 1.5rem 0; color: #ffffff; font-size: 1.5rem;">My Profiles!</h2>
+
+    <div style="display: flex; gap: 2rem; justify-content: center; align-items: center;">
+      
+      <a href="https://www.reddit.com/user/bruh_kai/" target="_blank" class="icon-link">
+        <i class="fa-brands fa-reddit" style="font-size: 2.5rem;"></i>
+      </a>
+
+      <a href="https://www.youtube.com/@epoxy.808" target="_blank" class="icon-link">
+        <i class="fa-brands fa-youtube" style="font-size: 2.5rem;"></i>
+      </a>
+
+      <a href="https://stardance.hackclub.com/@kai_lmao/projects" target="_blank" class="icon-link">
+        <img src="./stardance logo.png" alt="Stardance" style="width: 2.5rem; height: 2.5rem; object-fit: contain;">
+      </a>
+
+      <a href="https://github.com/kai-lmao" target="_blank" class="icon-link">
+        <i class="fa-brands fa-github" style="font-size: 2.5rem;"></i>
+      </a>
+
+    </div>
+  </div>
+
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="surprise-btn" style="
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 0.8rem 1.4rem;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  ">
+    surprise button!
+  </a>
+
+  <div style="
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.8rem 1.4rem;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  " id="live-clock">
+    00:00:00
+  </div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('live-clock').textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+</body>
+</html>
